@@ -15,6 +15,9 @@ module.exports = {
 		'no-unused-vars': 'warn',
 		'no-restricted-exports': 'off',
 		'react/react-in-jsx-scope': 'off',
+		'react/jsx-props-no-spreading': 'off',
+		'consistent-return': 'off',
 		'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+		'jsx-a11y/label-has-associated-control': 'off',
 	},
 };
