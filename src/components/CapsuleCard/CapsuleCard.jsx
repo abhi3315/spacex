@@ -45,7 +45,7 @@ function CapsuleCard({ capsule }) {
 
 	return (
 		<div className='flex justify-center cursor-pointer'>
-			<div className='block max-w-sm rounded-2xl overflow-hidden bg-white text-center shadow-lg hover:shadow-2xl transition duration-500 ease-in-out dark:bg-neutral-700'>
+			<div className='block max-w-sm rounded-2xl overflow-hidden bg-white text-center shadow-lg hover:shadow-2xl transition duration-500 ease-in-out dark:bg-neutral-700 w-full'>
 				<div className='p-6 h-32 overflow-hidden'>
 					<h5 className='mb-1 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50 line-clamp-1'>
 						<span title='Capsule Serial'>{serial}</span> | <span title='Capsule Type'>{type}</span>

@@ -1,16 +1,19 @@
-import propTypes from 'prop-types';
 import { useFormik } from 'formik';
 
+import { useCapsuleFilter } from '../../contexts/capsule-filter';
 import { capsuleStatus, capsuleType } from './FilterForm.const';
 
-function FilterForm({ handleFormSubmit }) {
-	const { handleSubmit, values, handleChange } = useFormik({
+function FilterForm() {
+	const { setFilter } = useCapsuleFilter();
+
+	const { handleSubmit, values, handleChange, resetForm } = useFormik({
 		initialValues: {
 			capsuleStatus: '',
 			capsuleType: '',
 			serialId: '',
 		},
-		onSubmit: (submittedData) => handleFormSubmit(submittedData),
+		onSubmit: (submittedData) => setFilter(submittedData),
+		onReset: (initialValues) => setFilter(initialValues),
 	});
 
 	return (
@@ -88,12 +91,27 @@ function FilterForm({ handleFormSubmit }) {
 					</div>
 				</form>
 			</div>
+			<div className='flex justify-end py-2 px-3'>
+				<button
+					type='button'
+					onClick={resetForm}
+					className='text-red-500 dark:text-red-400 hover:text-red-600 dark:hover:text-red-600 flex transition-colors'
+				>
+					Clear Filters
+					<svg
+						xmlns='http://www.w3.org/2000/svg'
+						fill='none'
+						viewBox='0 0 24 24'
+						strokeWidth={1.5}
+						stroke='currentColor'
+						className='w-6 h-6'
+					>
+						<path strokeLinecap='round' strokeLinejoin='round' d='M6 18L18 6M6 6l12 12' />
+					</svg>
+				</button>
+			</div>
 		</div>
 	);
 }
-
-FilterForm.propTypes = {
-	handleFormSubmit: propTypes.func.isRequired,
-};
 
 export default FilterForm;

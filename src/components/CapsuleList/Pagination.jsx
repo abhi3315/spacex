@@ -1,15 +1,38 @@
-function Pagination() {
+import propTypes from 'prop-types';
+
+import { useCapsuleFilter } from '../../contexts/capsule-filter';
+
+function Pagination({ hasNextPage, hasPrevPage, totalCapsules }) {
+	const { setPage, page, limit } = useCapsuleFilter();
+
+	const handlePrevPage = () => {
+		if (hasPrevPage) {
+			setPage(page - 1);
+		}
+	};
+
+	const handleNextPage = () => {
+		if (hasNextPage) {
+			setPage(page + 1);
+		}
+	};
+
+	const docStart = (page - 1) * limit + 1;
+	const docEnd = limit * page > totalCapsules ? totalCapsules : limit * page;
+
 	return (
 		<div className='flex flex-col items-center'>
 			<span className='text-sm text-gray-700 dark:text-gray-400'>
-				Showing <span className='font-semibold text-gray-900 dark:text-white'>1</span> to{' '}
-				<span className='font-semibold text-gray-900 dark:text-white'>10</span> of{' '}
-				<span className='font-semibold text-gray-900 dark:text-white'>100</span> Entries
+				Showing <span className='font-semibold text-gray-900 dark:text-white'>{docStart}</span> to{' '}
+				<span className='font-semibold text-gray-900 dark:text-white'>{docEnd}</span> of{' '}
+				<span className='font-semibold text-gray-900 dark:text-white'>{totalCapsules}</span> Entries
 			</span>
 			<div className='inline-flex mt-2 xs:mt-0'>
 				<button
 					type='button'
-					className='inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-gray-800 rounded-l hover:bg-gray-900 dark:bg-zinc-800 dark:border-zinc-700 dark:text-gray-400 dark:hover:bg-zinc-600 dark:hover:text-white'
+					onClick={handlePrevPage}
+					disabled={!hasPrevPage}
+					className='inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-gray-800 rounded-l hover:bg-gray-900 dark:bg-zinc-800 dark:border-zinc-700 dark:text-gray-400 dark:hover:bg-zinc-600 dark:hover:text-white disabled:cursor-not-allowed'
 				>
 					<svg
 						aria-hidden='true'
@@ -28,7 +51,9 @@ function Pagination() {
 				</button>
 				<button
 					type='button'
-					className='inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-gray-800 border-0 border-l border-gray-700 rounded-r hover:bg-gray-900 dark:bg-zinc-800 dark:border-zinc-700 dark:text-gray-400 dark:hover:bg-zinc-600 dark:hover:text-white'
+					onClick={handleNextPage}
+					disabled={!hasNextPage}
+					className='inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-gray-800 border-0 border-l border-gray-700 rounded-r hover:bg-gray-900 dark:bg-zinc-800 dark:border-zinc-700 dark:text-gray-400 dark:hover:bg-zinc-600 dark:hover:text-white disabled:cursor-not-allowed'
 				>
 					Next
 					<svg
@@ -49,5 +74,17 @@ function Pagination() {
 		</div>
 	);
 }
+
+Pagination.propTypes = {
+	hasNextPage: propTypes.bool,
+	hasPrevPage: propTypes.bool,
+	totalCapsules: propTypes.number,
+};
+
+Pagination.defaultProps = {
+	hasNextPage: false,
+	hasPrevPage: false,
+	totalCapsules: 0,
+};
 
 export default Pagination;

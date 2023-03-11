@@ -39,7 +39,7 @@ function RocketCard({ rocket }) {
 			onMouseEnter={handleHover}
 			onMouseLeave={handleUnhover}
 		>
-			<div className='block max-w-sm rounded-2xl overflow-hidden bg-white text-center shadow-lg hover:shadow-2xl transition duration-500 ease-in-out dark:bg-neutral-700'>
+			<div className='block max-w-sm rounded-2xl overflow-hidden bg-white text-center shadow-lg hover:shadow-2xl transition duration-500 ease-in-out dark:bg-neutral-700 w-full'>
 				<div className='sm:h-1/2'>
 					{images?.length > 0 && <Carousel images={images} pause={!isHovered} interval={2000} />}
 				</div>

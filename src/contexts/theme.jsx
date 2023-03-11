@@ -36,11 +36,6 @@ export const useTheme = () => {
 	return context;
 };
 
-export const useThemeToggle = () => {
-	const { toggleTheme } = useTheme();
-	return toggleTheme;
-};
-
 ThemeProvider.propTypes = {
 	children: PropTypes.node.isRequired,
 };

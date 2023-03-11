@@ -13,7 +13,7 @@ export const useGetCapsules = (
 	limit = 10,
 ) =>
 	useQuery(
-		['capsules', capsuleStatus, capsuleType, serialId],
+		['capsules', capsuleStatus, capsuleType, serialId, page, limit],
 		() => {
 			const query = {
 				...(capsuleStatus && { status: capsuleStatus }),
