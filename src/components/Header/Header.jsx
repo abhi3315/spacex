@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import { useTheme } from '../../contexts/theme';
 
 import DarkShuttleIcon from '../../assets/shuttle-dark.png';
@@ -36,9 +38,9 @@ function Header() {
 
 	return (
 		<header>
-			<nav className='bg-white border-gray-200 px-10 xl:px-32 shadow-2xl mb-10 py-2.5 dark:bg-zinc-800'>
+			<nav className='bg-white border-gray-200 px-10 xl:px-32 shadow-2xl py-2.5 dark:bg-zinc-800'>
 				<div className='flex flex-wrap justify-between items-center mx-auto max-w-screen-xl'>
-					<div href='/' className='flex items-center'>
+					<Link to='/' className='flex items-center'>
 						<img
 							src={theme === 'dark' ? LightShuttleIcon : DarkShuttleIcon}
 							className='mr-3 h-6 sm:h-9'
@@ -47,7 +49,7 @@ function Header() {
 						<span className='self-center text-xl font-semibold whitespace-nowrap dark:text-white'>
 							Shuttle
 						</span>
-					</div>
+					</Link>
 					<div className='flex items-center lg:order-2'>
 						<button
 							onClick={toggleTheme}
