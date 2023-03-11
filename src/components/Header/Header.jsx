@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import { useTheme } from '../../contexts/theme';
 
 import DarkShuttleIcon from '../../assets/shuttle-dark.png';
 import LightShuttleIcon from '../../assets/shuttle-light.png';
@@ -31,7 +31,9 @@ const LightIcon = (
 	</svg>
 );
 
-function Header({ toggleTheme, theme }) {
+function Header() {
+	const { theme, toggleTheme } = useTheme();
+
 	return (
 		<header>
 			<nav className='bg-white border-gray-200 px-10 xl:px-32 shadow-2xl mb-10 py-2.5 dark:bg-zinc-800'>
@@ -60,10 +62,5 @@ function Header({ toggleTheme, theme }) {
 		</header>
 	);
 }
-
-Header.propTypes = {
-	toggleTheme: PropTypes.func.isRequired,
-	theme: PropTypes.string.isRequired,
-};
 
 export default Header;

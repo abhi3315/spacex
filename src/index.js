@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { QueryClient, QueryClientProvider } from 'react-query';
-import './index.css';
+
+import { ThemeProvider } from './contexts/theme';
 import App from './components/App';
+import './index.css';
 
 const queryClient = new QueryClient();
 
@@ -10,7 +12,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 	<React.StrictMode>
 		<QueryClientProvider client={queryClient}>
-			<App />
+			<ThemeProvider>
+				<App />
+			</ThemeProvider>
 		</QueryClientProvider>
 	</React.StrictMode>,
 );
