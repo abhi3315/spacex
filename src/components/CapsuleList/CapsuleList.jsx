@@ -1,8 +1,8 @@
-import CapsuleCard from '../CapsuleCard';
-import Pagination from './Pagination';
-import LoadingCard from '../LoadingCard';
-import { useGetCapsules } from '../../hooks/capsule';
 import { useCapsuleFilter } from '../../contexts/capsule-filter';
+import { useGetCapsules } from '../../hooks/capsule';
+import CapsuleCard from '../CapsuleCard';
+import LoadingCard from '../LoadingCard';
+import Pagination from './Pagination';
 
 function CapsuleList() {
 	const { page, filter } = useCapsuleFilter();

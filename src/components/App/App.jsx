@@ -1,8 +1,8 @@
-import RocketList from '../RocketList';
 import CapsuleList from '../CapsuleList';
+import FilterForm from '../FilterForm';
 import Header from '../Header';
 import HeroBanner from '../HeroBanner';
-import FilterForm from '../FilterForm';
+import RocketList from '../RocketList';
 
 const theme = localStorage.getItem('theme');
 document.documentElement.classList.add(theme);

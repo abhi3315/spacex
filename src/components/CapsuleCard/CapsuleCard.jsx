@@ -1,4 +1,5 @@
 import propTypes from 'prop-types';
+
 import { capsuleStatus } from '../FilterForm/FilterForm.const';
 import Icons from './CapsuleCard.icons';
 

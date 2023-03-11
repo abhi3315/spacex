@@ -1,8 +1,9 @@
-import { useState, createRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import { createRef, useEffect, useState } from 'react';
 
-import PrevBtn from './PrevBtn';
 import NextBtn from './NextBtn';
+import PrevBtn from './PrevBtn';
+
 import './Carousel.scss';
 
 function Carousel({ images, controls, interval, pause }) {

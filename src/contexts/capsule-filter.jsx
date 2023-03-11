@@ -1,5 +1,5 @@
-import { createContext, useState, useMemo, useContext } from 'react';
 import PropTypes from 'prop-types';
+import { createContext, useContext, useMemo, useState } from 'react';
 
 const CapsuleFilterContext = createContext({
 	filter: {

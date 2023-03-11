@@ -1,9 +1,9 @@
-import { useState } from 'react';
 import PropTypes from 'prop-types';
+import { useState } from 'react';
 
-import Icons from './RocketCard.icons';
-import Carousel from '../Carousel';
 import convertToInternationalCurrencySystem from '../../utils/currency';
+import Carousel from '../Carousel';
+import Icons from './RocketCard.icons';
 
 function RocketCard({ rocket }) {
 	const [isHovered, setIsHovered] = useState(false);

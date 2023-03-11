@@ -1,5 +1,5 @@
-import { createContext, useState, useMemo, useEffect, useContext } from 'react';
 import PropTypes from 'prop-types';
+import { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
 const savedTheme = localStorage.getItem('theme') ?? 'light';
 

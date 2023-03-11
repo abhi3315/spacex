@@ -1,6 +1,7 @@
+import { useGetRockets } from '../../hooks/rocket';
+
 import LoadingCard from '../LoadingCard';
 import RocketCard from '../RocketCard';
-import { useGetRockets } from '../../hooks/rocket';
 
 export default function RocketList() {
 	const { data: rockets, isLoading } = useGetRockets();
