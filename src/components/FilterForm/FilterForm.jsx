@@ -1,19 +1,20 @@
+import propTypes from 'prop-types';
 import { useFormik } from 'formik';
 
 import { capsuleStatus, capsuleType } from './FilterForm.const';
 
-function FilterForm() {
+function FilterForm({ handleFormSubmit }) {
 	const { handleSubmit, values, handleChange } = useFormik({
 		initialValues: {
 			capsuleStatus: '',
 			capsuleType: '',
 			serialId: '',
 		},
-		onSubmit: (formData) => {},
+		onSubmit: (submittedData) => handleFormSubmit(submittedData),
 	});
 
 	return (
-		<div className='px-10 xl:px-32'>
+		<div className='px-10 xl:px-32 mb-5 sm:mb-20'>
 			<h2 className='dark:text-white text-4xl md:text-5xl font-bold text-center my-5 sm:my-20'>
 				SpaceX Capsules
 			</h2>
@@ -90,5 +91,9 @@ function FilterForm() {
 		</div>
 	);
 }
+
+FilterForm.propTypes = {
+	handleFormSubmit: propTypes.func.isRequired,
+};
 
 export default FilterForm;

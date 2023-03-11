@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 
-import Icons from './Icons';
+import Icons from './RocketCard.icons';
 import Carousel from '../Carousel';
 import convertToInternationalCurrencySystem from '../../utils/currency';
 
@@ -55,13 +55,6 @@ function RocketCard({ rocket }) {
 					<div className='flex justify-center items-center flex-col' title='Country'>
 						<Icons.LocationPin />
 						<p className='line-clamp-1'>{country}</p>
-					</div>
-					<div
-						id='country-tooltip'
-						role='tooltip'
-						className='absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700'
-					>
-						Country
 					</div>
 					<div className='flex justify-center items-center flex-col' title='First Flight'>
 						<Icons.Rocket />
