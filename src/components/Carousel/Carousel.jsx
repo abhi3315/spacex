@@ -25,7 +25,7 @@ function Carousel({ images, controls, interval, pause }) {
 	 */
 	const scrollToImage = (slideIndex) => {
 		setActiveSlide(slideIndex);
-		refs[slideIndex].current?.scrollIntoView({
+		refs[slideIndex]?.current?.scrollIntoView?.({
 			behavior: 'smooth',
 			block: 'nearest',
 			inline: 'start',
