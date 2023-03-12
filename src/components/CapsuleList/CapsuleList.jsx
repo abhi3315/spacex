@@ -13,7 +13,13 @@ function CapsuleList() {
 		<CapsuleCard key={capsuleData.id} capsule={capsuleData} />
 	));
 
-	const capsuleListLoading = new Array(3).fill(0).map(() => <LoadingCard key={Math.random()} />);
+	const capsuleListLoading = (
+		<div data-testid='loading-indicator'>
+			{new Array(3).fill(0).map(() => (
+				<LoadingCard key={Math.random()} />
+			))}
+		</div>
+	);
 
 	const { hasNextPage, hasPrevPage, totalDocs } = capsules || {};
 

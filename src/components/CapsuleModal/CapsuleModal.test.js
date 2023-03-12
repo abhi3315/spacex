@@ -1,9 +1,10 @@
-import { act, cleanup, fireEvent, render, waitFor } from '@testing-library/react';
+import { cleanup, render } from '@testing-library/react';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
+import { useGetCapsule } from '../../hooks/capsule';
 import CapsuleModal from './CapsuleModal';
 
-afterEach(cleanup);
+jest.mock('../../hooks/capsule');
 
 const capsuleData = {
 	reuse_count: 0,
@@ -18,6 +19,15 @@ const capsuleData = {
 };
 
 describe('CapsuleModal', () => {
+	beforeEach(() => {
+		useGetCapsule.mockImplementation(() => ({ isLoading: true }));
+	});
+
+	afterEach(() => {
+		jest.clearAllMocks();
+		cleanup();
+	});
+
 	it('should render correctly', () => {
 		const { container } = render(
 			<QueryClientProvider client={new QueryClient()}>

@@ -30,6 +30,7 @@ function Pagination({ hasNextPage, hasPrevPage, totalCapsules }) {
 			<div className='inline-flex mt-2 xs:mt-0'>
 				<button
 					type='button'
+					aria-label='Previous'
 					onClick={handlePrevPage}
 					disabled={!hasPrevPage}
 					className='inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-gray-800 rounded-l hover:bg-gray-900 dark:bg-zinc-800 dark:border-zinc-700 dark:text-gray-400 dark:hover:bg-zinc-600 dark:hover:text-white disabled:cursor-not-allowed'
@@ -51,6 +52,7 @@ function Pagination({ hasNextPage, hasPrevPage, totalCapsules }) {
 				</button>
 				<button
 					type='button'
+					aria-label='Next'
 					onClick={handleNextPage}
 					disabled={!hasNextPage}
 					className='inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-gray-800 border-0 border-l border-gray-700 rounded-r hover:bg-gray-900 dark:bg-zinc-800 dark:border-zinc-700 dark:text-gray-400 dark:hover:bg-zinc-600 dark:hover:text-white disabled:cursor-not-allowed'
