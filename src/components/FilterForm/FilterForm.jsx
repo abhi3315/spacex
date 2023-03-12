@@ -33,6 +33,7 @@ function FilterForm() {
 						<select
 							name='capsuleStatus'
 							id='capsule-status'
+							data-testid='capsule-status'
 							value={values.capsuleStatus}
 							onChange={handleChange}
 							className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
@@ -54,6 +55,7 @@ function FilterForm() {
 						<select
 							name='capsuleType'
 							id='capsule-type'
+							data-testid='capsule-type'
 							value={values.capsuleType}
 							onChange={handleChange}
 							className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
@@ -76,6 +78,7 @@ function FilterForm() {
 							type='text'
 							id='serial-id'
 							name='serialId'
+							data-testid='serial-id'
 							value={values.serialId}
 							onChange={handleChange}
 							className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
@@ -84,6 +87,7 @@ function FilterForm() {
 					<div className='flex items-end justify-center'>
 						<button
 							type='submit'
+							data-testid='submit-filters'
 							className='rounded px-8 py-2 shadow-md font-medium uppercase text-white bg-green-600 hover:bg-green-800 transition-all duration-200 ease-linear'
 						>
 							Filter
@@ -95,6 +99,7 @@ function FilterForm() {
 				<button
 					type='button'
 					onClick={resetForm}
+					data-testid='clear-filters'
 					className='text-red-500 dark:text-red-400 hover:text-red-600 dark:hover:text-red-600 flex transition-colors'
 				>
 					Clear Filters

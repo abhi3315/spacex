@@ -1,0 +1,150 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilterForm should render correctly 1`] = `
+<div>
+  <div
+    class="px-10 xl:px-32 mb-5 sm:mb-20"
+  >
+    <h2
+      class="dark:text-white text-4xl md:text-5xl font-bold text-center my-5 sm:my-20"
+    >
+      SpaceX Capsules
+    </h2>
+    <div
+      class="block rounded-lg bg-white p-6 shadow-lg dark:bg-zinc-800 w-full"
+    >
+      <form
+        class="grid grid-cols-1 gap-4 md:grid-cols-4"
+      >
+        <div>
+          <label
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            for="capsule-status"
+          >
+            Capsule Status
+          </label>
+          <select
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            data-testid="capsule-status"
+            id="capsule-status"
+            name="capsuleStatus"
+          >
+            <option
+              value=""
+            >
+              All
+            </option>
+            <option
+              value="active"
+            >
+              Active
+            </option>
+            <option
+              value="destroyed"
+            >
+              Destroyed
+            </option>
+            <option
+              value="retired"
+            >
+              Retired
+            </option>
+            <option
+              value="unknown"
+            >
+              Unknown
+            </option>
+          </select>
+        </div>
+        <div>
+          <label
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            for="capsule-type"
+          >
+            Capsule Type
+          </label>
+          <select
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            data-testid="capsule-type"
+            id="capsule-type"
+            name="capsuleType"
+          >
+            <option
+              value=""
+            >
+              All
+            </option>
+            <option
+              value="Dragon 1.0"
+            >
+              Dragon 1.0
+            </option>
+            <option
+              value="Dragon 1.1"
+            >
+              Dragon 1.1
+            </option>
+            <option
+              value="Dragon 2.0"
+            >
+              Dragon 2.0
+            </option>
+          </select>
+        </div>
+        <div>
+          <label
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            for="serial-id"
+          >
+            Serial ID
+          </label>
+          <input
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            data-testid="serial-id"
+            id="serial-id"
+            name="serialId"
+            type="text"
+            value=""
+          />
+        </div>
+        <div
+          class="flex items-end justify-center"
+        >
+          <button
+            class="rounded px-8 py-2 shadow-md font-medium uppercase text-white bg-green-600 hover:bg-green-800 transition-all duration-200 ease-linear"
+            data-testid="submit-filters"
+            type="submit"
+          >
+            Filter
+          </button>
+        </div>
+      </form>
+    </div>
+    <div
+      class="flex justify-end py-2 px-3"
+    >
+      <button
+        class="text-red-500 dark:text-red-400 hover:text-red-600 dark:hover:text-red-600 flex transition-colors"
+        data-testid="clear-filters"
+        type="button"
+      >
+        Clear Filters
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6 18L18 6M6 6l12 12"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+`;

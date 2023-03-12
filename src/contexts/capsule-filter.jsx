@@ -4,7 +4,7 @@ import { createContext, useContext, useMemo, useState } from 'react';
 /**
  * Capsule Filter Context.
  */
-const CapsuleFilterContext = createContext({
+export const CapsuleFilterContext = createContext({
 	filter: {
 		capsuleStatus: '',
 		capsuleType: '',
@@ -39,7 +39,7 @@ export function CapsuleFilterProvider({ children }) {
 
 	const value = useMemo(
 		() => ({ filter, page, limit, setFilter: handleFilterChange, setPage, setLimit }),
-		[filter, page],
+		[filter, page, limit],
 	);
 
 	return <CapsuleFilterContext.Provider value={value}>{children}</CapsuleFilterContext.Provider>;
