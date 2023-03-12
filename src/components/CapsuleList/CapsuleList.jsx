@@ -7,7 +7,7 @@ import Pagination from './Pagination';
 function CapsuleList() {
 	const { page, filter } = useCapsuleFilter();
 
-	const { data: capsules, isLoading, isFetching } = useGetCapsules(filter, page);
+	const { data: capsules, isLoading } = useGetCapsules(filter, page);
 
 	const capsuleList = capsules?.docs?.map((capsuleData) => (
 		<CapsuleCard key={capsuleData.id} capsule={capsuleData} />
@@ -22,7 +22,7 @@ function CapsuleList() {
 			<div className='grid grid-cols-1 gap-10 px-10 pb-20 xl:px-32 lg:grid-cols-3 md:grid-cols-2'>
 				{isLoading ? capsuleListLoading : capsuleList}
 			</div>
-			{isLoading || isFetching || !capsules?.docs?.length ? null : (
+			{isLoading || !capsules?.docs?.length ? null : (
 				<Pagination hasNextPage={hasNextPage} hasPrevPage={hasPrevPage} totalCapsules={totalDocs} />
 			)}
 		</div>

@@ -3,10 +3,7 @@ import { useParams } from 'react-router-dom';
 import convertToInternationalCurrencySystem from '../../utils/currency';
 import { useGetRocket } from '../../hooks/rocket';
 import Carousel from '../Carousel';
-
-function NA() {
-	return <span className='text-neutral-400'>N/A</span>;
-}
+import NA from '../NA';
 
 function Rocket() {
 	const { id } = useParams();
