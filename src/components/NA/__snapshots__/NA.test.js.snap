@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NA should render correctly 1`] = `
+<div>
+  <span
+    class="text-neutral-400"
+  >
+    N/A
+  </span>
+</div>
+`;

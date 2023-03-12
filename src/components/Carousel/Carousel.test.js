@@ -1,7 +1,8 @@
-import { render } from '@testing-library/react';
-import { act } from 'react-dom/test-utils';
+import { render, cleanup } from '@testing-library/react';
 
 import Carousel from './Carousel';
+
+afterEach(cleanup);
 
 describe('Carousel', () => {
 	it('should render correctly', () => {
