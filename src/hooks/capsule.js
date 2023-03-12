@@ -59,4 +59,6 @@ export const useGetCapsules = (
  *
  */
 export const useGetCapsule = (id) =>
-	useQuery(['capsule', id], () => fetch(`${SPACE_API}/capsules/${id}`).then((res) => res.json()));
+	useQuery(['capsule', id], () => fetch(`${SPACE_API}/capsules/${id}`).then((res) => res.json()), {
+		refetchOnWindowFocus: false,
+	});

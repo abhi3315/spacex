@@ -72,7 +72,7 @@ function CapsuleCard({ capsule }) {
 					</div>
 				</div>
 			</div>
-			<CapsuleModal id={id} isOpen={openModal} onClose={handleCloseModal} />
+			{openModal && <CapsuleModal id={id} isOpen={openModal} onClose={handleCloseModal} />}
 		</>
 	);
 }

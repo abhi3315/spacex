@@ -22,4 +22,6 @@ export const useGetRockets = () =>
  * @returns {Object} - Object containing the data and status of the query
  */
 export const useGetRocket = (id) =>
-	useQuery(['rocket', id], () => fetch(`${SPACE_API}/rockets/${id}`).then((res) => res.json()));
+	useQuery(['rocket', id], () => fetch(`${SPACE_API}/rockets/${id}`).then((res) => res.json()), {
+		refetchOnWindowFocus: false,
+	});
