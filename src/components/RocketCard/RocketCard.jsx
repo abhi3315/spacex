@@ -1,11 +1,14 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import convertToInternationalCurrencySystem from '../../utils/currency';
 import Carousel from '../Carousel';
 import Icons from './RocketCard.icons';
 
 function RocketCard({ rocket }) {
+	const navigate = useNavigate();
+
 	const [isHovered, setIsHovered] = useState(false);
 
 	const handleHover = () => {
@@ -14,6 +17,10 @@ function RocketCard({ rocket }) {
 
 	const handleUnhover = () => {
 		setIsHovered(false);
+	};
+
+	const handleCardClick = () => {
+		navigate(`/rockets/${rocket.id}`);
 	};
 
 	const {
@@ -35,13 +42,17 @@ function RocketCard({ rocket }) {
 
 	return (
 		<div
+			aria-hidden='true'
 			className='flex justify-center cursor-pointer'
+			onClick={handleCardClick}
 			onMouseEnter={handleHover}
 			onMouseLeave={handleUnhover}
 		>
 			<div className='block max-w-sm rounded-2xl overflow-hidden bg-white text-center shadow-lg hover:shadow-2xl transition duration-500 ease-in-out dark:bg-neutral-700 w-full'>
 				<div className='sm:h-1/2'>
-					{images?.length > 0 && <Carousel images={images} pause={!isHovered} interval={2000} />}
+					{images?.length > 0 && (
+						<Carousel images={images} pause={!isHovered} interval={2000} controls={false} />
+					)}
 				</div>
 				<div className='p-6'>
 					<h5 className='mb-1 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50 line-clamp-1'>
@@ -76,6 +87,7 @@ function RocketCard({ rocket }) {
 
 RocketCard.propTypes = {
 	rocket: PropTypes.shape({
+		id: PropTypes.string,
 		name: PropTypes.string,
 		description: PropTypes.string,
 		first_flight: PropTypes.string,

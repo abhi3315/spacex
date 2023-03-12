@@ -25,7 +25,7 @@ function Carousel({ images, controls, interval, pause }) {
 	 */
 	const scrollToImage = (slideIndex) => {
 		setActiveSlide(slideIndex);
-		refs[slideIndex].current.scrollIntoView({
+		refs[slideIndex].current?.scrollIntoView({
 			behavior: 'smooth',
 			block: 'nearest',
 			inline: 'start',
@@ -94,7 +94,7 @@ function Carousel({ images, controls, interval, pause }) {
 }
 
 Carousel.propTypes = {
-	images: PropTypes.arrayOf(PropTypes.string).isRequired,
+	images: PropTypes.arrayOf(PropTypes.string),
 	controls: PropTypes.bool,
 	interval: PropTypes.number,
 	pause: PropTypes.bool,
@@ -104,6 +104,7 @@ Carousel.defaultProps = {
 	controls: true,
 	interval: 5000,
 	pause: true,
+	images: [],
 };
 
 export default Carousel;
