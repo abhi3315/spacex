@@ -4,7 +4,9 @@ const SPACE_API = process.env.REACT_APP_SPACEX_API_URL;
 
 /**
  * useGetRockets - React Query hook to fetch all rockets
+ *
  * @returns {Object} - Object containing the data and status of the query
+ *
  * @example const { data, status } = useGetRockets();
  */
 export const useGetRockets = () =>
@@ -14,7 +16,9 @@ export const useGetRockets = () =>
 
 /**
  * useGetRocket - React Query hook to fetch a single rocket
+ *
  * @param {string} id - ID of the rocket to fetch
+ *
  * @returns {Object} - Object containing the data and status of the query
  */
 export const useGetRocket = (id) =>

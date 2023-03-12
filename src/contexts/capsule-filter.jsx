@@ -1,6 +1,9 @@
 import PropTypes from 'prop-types';
 import { createContext, useContext, useMemo, useState } from 'react';
 
+/**
+ * Capsule Filter Context.
+ */
 const CapsuleFilterContext = createContext({
 	filter: {
 		capsuleStatus: '',
@@ -13,6 +16,13 @@ const CapsuleFilterContext = createContext({
 	setPage: () => {},
 });
 
+/**
+ * Capsule Filter Provider.
+ *
+ * @param {JSX} param Children
+ *
+ * @returns {JSX} Provider
+ */
 export function CapsuleFilterProvider({ children }) {
 	const [filter, setFilter] = useState({
 		capsuleStatus: '',
@@ -35,6 +45,11 @@ export function CapsuleFilterProvider({ children }) {
 	return <CapsuleFilterContext.Provider value={value}>{children}</CapsuleFilterContext.Provider>;
 }
 
+/**
+ * Capsule Filter Hook.
+ *
+ * @returns {Object} Context
+ */
 export const useCapsuleFilter = () => {
 	const context = useContext(CapsuleFilterContext);
 	if (context === undefined) {
