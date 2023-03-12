@@ -40,7 +40,7 @@ function Header() {
 		<header>
 			<nav className='bg-white border-gray-200 px-10 xl:px-32 shadow-2xl py-2.5 dark:bg-zinc-800'>
 				<div className='flex flex-wrap justify-between items-center mx-auto max-w-screen-xl'>
-					<Link to='/' className='flex items-center'>
+					<Link to='/' className='flex items-center' aria-label='Home'>
 						<img
 							src={theme === 'dark' ? LightShuttleIcon : DarkShuttleIcon}
 							className='mr-3 h-6 sm:h-9'
@@ -52,6 +52,7 @@ function Header() {
 					</Link>
 					<div className='flex items-center lg:order-2'>
 						<button
+							aria-label='Toggle Dark Mode'
 							onClick={toggleTheme}
 							type='button'
 							className='text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center'

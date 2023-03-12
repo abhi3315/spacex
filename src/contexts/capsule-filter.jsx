@@ -4,7 +4,7 @@ import { createContext, useContext, useMemo, useState } from 'react';
 /**
  * Capsule Filter Context.
  */
-export const CapsuleFilterContext = createContext({
+const CapsuleFilterContext = createContext({
 	filter: {
 		capsuleStatus: '',
 		capsuleType: '',
