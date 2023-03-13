@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/abhishek-sharma-frontend-developer/static/css/main.a47a7232.css",
+    "main.js": "/abhishek-sharma-frontend-developer/static/js/main.8863d5c8.js",
+    "static/media/rocket.webp": "/abhishek-sharma-frontend-developer/static/media/rocket.05bdad6b70f42ba414ae.webp",
+    "service-worker.js": "/abhishek-sharma-frontend-developer/service-worker.js",
+    "index.html": "/abhishek-sharma-frontend-developer/index.html",
+    "main.a47a7232.css.map": "/abhishek-sharma-frontend-developer/static/css/main.a47a7232.css.map",
+    "main.8863d5c8.js.map": "/abhishek-sharma-frontend-developer/static/js/main.8863d5c8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a47a7232.css",
+    "static/js/main.8863d5c8.js"
+  ]
+}
