@@ -1,0 +1,332 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RocketCard should render correctly 1`] = `
+<div>
+  <div
+    aria-hidden="true"
+    aria-label="Rocket Card"
+    class="flex justify-center cursor-pointer"
+    data-testid="rocket-card"
+    role="button"
+  >
+    <div
+      class="block max-w-sm rounded-2xl overflow-hidden bg-white text-center shadow-lg hover:shadow-2xl transition duration-500 ease-in-out dark:bg-neutral-700 w-full"
+    >
+      <div
+        class="sm:h-1/2"
+      />
+      <div
+        class="p-6"
+      >
+        <h5
+          class="mb-1 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50 line-clamp-1"
+        />
+        <p
+          class="text-base text-neutral-600 dark:text-neutral-200 line-clamp-2"
+        />
+      </div>
+      <div
+        class="border-t-2 border-neutral-100 py-3 px-6 dark:border-neutral-600 dark:text-neutral-50 grid grid-cols-2 gap-4 pb-8 mb-4"
+      >
+        <div
+          class="flex justify-center items-center flex-col"
+          title="Country"
+        >
+          <svg
+            class="w-6 h-6"
+            data-te-toggle="tooltip"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            title="Hi! I'm tooltip"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <p
+            class="line-clamp-1"
+          >
+            <span
+              class="text-neutral-400"
+            >
+              N/A
+            </span>
+          </p>
+        </div>
+        <div
+          class="flex justify-center items-center flex-col"
+          title="First Flight"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <p>
+            <span
+              class="text-neutral-400"
+            >
+              N/A
+            </span>
+          </p>
+        </div>
+        <div
+          class="flex justify-center items-center flex-col"
+          title="SuccessRate"
+        >
+          <svg
+            class="w-6 h-6 text-yellow-500"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M12 18a3.75 3.75 0 00.495-7.467 5.99 5.99 0 00-1.925 3.546 5.974 5.974 0 01-2.133-1A3.75 3.75 0 0012 18z"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <p
+            class="text-yellow-500"
+          >
+            <span
+              class="text-neutral-400"
+            >
+              N/A
+            </span>
+            %
+          </p>
+        </div>
+        <div
+          class="flex justify-center items-center flex-col"
+          title="Cose Per Launch ($)"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <p>
+            <span
+              class="text-neutral-400"
+            >
+              N/A
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`RocketCard should render correctly with props 1`] = `
+<div>
+  <div
+    aria-hidden="true"
+    aria-label="Rocket Card"
+    class="flex justify-center cursor-pointer"
+    data-testid="rocket-card"
+    role="button"
+  >
+    <div
+      class="block max-w-sm rounded-2xl overflow-hidden bg-white text-center shadow-lg hover:shadow-2xl transition duration-500 ease-in-out dark:bg-neutral-700 w-full"
+    >
+      <div
+        class="sm:h-1/2"
+      >
+        <div
+          class="flex h-full justify-center w-full items-center carousel-component"
+        >
+          <div
+            class="relative w-full h-full"
+          >
+            <div
+              class="carousel"
+            >
+              <div
+                class="w-full flex-shrink-0"
+              >
+                <img
+                  alt="slide-1"
+                  class="w-full h-full object-bottom object-cover"
+                  loading="lazy"
+                  src="https://imgur.com/DaCfMsj.jpg"
+                />
+              </div>
+              <div
+                class="w-full flex-shrink-0"
+              >
+                <img
+                  alt="slide-2"
+                  class="w-full h-full object-bottom object-cover"
+                  loading="lazy"
+                  src="https://imgur.com/azYafd8.jpg"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="p-6"
+      >
+        <h5
+          class="mb-1 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50 line-clamp-1"
+        >
+          Falcon 1
+        </h5>
+        <p
+          class="text-base text-neutral-600 dark:text-neutral-200 line-clamp-2"
+        >
+          The Falcon 1 was an expendable launch system privately developed and manufactured by SpaceX during 2006-2009. On 28 September 2008, Falcon 1 became the first privately-developed liquid-fuel launch vehicle to go into orbit around the Earth.
+        </p>
+      </div>
+      <div
+        class="border-t-2 border-neutral-100 py-3 px-6 dark:border-neutral-600 dark:text-neutral-50 grid grid-cols-2 gap-4 pb-8 mb-4"
+      >
+        <div
+          class="flex justify-center items-center flex-col"
+          title="Country"
+        >
+          <svg
+            class="w-6 h-6"
+            data-te-toggle="tooltip"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            title="Hi! I'm tooltip"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <p
+            class="line-clamp-1"
+          >
+            Republic of the Marshall Islands
+          </p>
+        </div>
+        <div
+          class="flex justify-center items-center flex-col"
+          title="First Flight"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <p>
+            2006-03-24
+          </p>
+        </div>
+        <div
+          class="flex justify-center items-center flex-col"
+          title="SuccessRate"
+        >
+          <svg
+            class="w-6 h-6 text-yellow-500"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M12 18a3.75 3.75 0 00.495-7.467 5.99 5.99 0 00-1.925 3.546 5.974 5.974 0 01-2.133-1A3.75 3.75 0 0012 18z"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <p
+            class="text-yellow-500"
+          >
+            40
+            %
+          </p>
+        </div>
+        <div
+          class="flex justify-center items-center flex-col"
+          title="Cose Per Launch ($)"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <p>
+            6.70 M
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

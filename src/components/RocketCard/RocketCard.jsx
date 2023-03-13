@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 import convertToInternationalCurrencySystem from '../../utils/currency';
 import Carousel from '../Carousel';
+import NA from '../NA';
 import Icons from './RocketCard.icons';
 
 function RocketCard({ rocket }) {
@@ -43,6 +44,9 @@ function RocketCard({ rocket }) {
 	return (
 		<div
 			aria-hidden='true'
+			role='button'
+			aria-label='Rocket Card'
+			data-testid='rocket-card'
 			className='flex justify-center cursor-pointer'
 			onClick={handleCardClick}
 			onMouseEnter={handleHover}
@@ -65,19 +69,19 @@ function RocketCard({ rocket }) {
 				<div className='border-t-2 border-neutral-100 py-3 px-6 dark:border-neutral-600 dark:text-neutral-50 grid grid-cols-2 gap-4 pb-8 mb-4'>
 					<div className='flex justify-center items-center flex-col' title='Country'>
 						<Icons.LocationPin />
-						<p className='line-clamp-1'>{country}</p>
+						<p className='line-clamp-1'>{country ?? <NA />}</p>
 					</div>
 					<div className='flex justify-center items-center flex-col' title='First Flight'>
 						<Icons.Rocket />
-						<p>{firstFlight}</p>
+						<p>{firstFlight ?? <NA />}</p>
 					</div>
 					<div className='flex justify-center items-center flex-col' title='SuccessRate'>
 						<Icons.Fire successRateColor={successRateColor} />
-						<p className={successRateColor}>{successRate}%</p>
+						<p className={successRateColor}>{successRate ?? <NA />}%</p>
 					</div>
 					<div className='flex justify-center items-center flex-col' title='Cose Per Launch ($)'>
 						<Icons.Dollar />
-						<p>{convertToInternationalCurrencySystem(costPerLaunch)}</p>
+						<p>{costPerLaunch ? convertToInternationalCurrencySystem(costPerLaunch) : <NA />}</p>
 					</div>
 				</div>
 			</div>

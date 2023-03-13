@@ -27,7 +27,7 @@ function Capsule({ id, isOpen, onClose }) {
 	}
 
 	if (isLoading) {
-		return <div>Loading...</div>;
+		return null;
 	}
 
 	return (
