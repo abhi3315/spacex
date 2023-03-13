@@ -7,7 +7,7 @@ import Pagination from './Pagination';
 function CapsuleList() {
 	const { page, filter } = useCapsuleFilter();
 
-	const { data: capsules, isLoading } = useGetCapsules(filter, page);
+	const { data: capsules, isLoading, isError } = useGetCapsules(filter, page);
 
 	const capsuleList = capsules?.docs?.map((capsuleData) => (
 		<CapsuleCard key={capsuleData.id} capsule={capsuleData} />
@@ -22,6 +22,14 @@ function CapsuleList() {
 	);
 
 	const { hasNextPage, hasPrevPage, totalDocs } = capsules || {};
+
+	if (isError) {
+		return (
+			<h3 className='text-center my-10 text-xl text-red-500'>
+				Unable to load Capsule list. Please try again later.
+			</h3>
+		);
+	}
 
 	return (
 		<div className='mb-32'>

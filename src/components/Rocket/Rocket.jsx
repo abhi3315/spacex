@@ -32,7 +32,7 @@ function Rocket() {
 
 	const { id } = useParams();
 
-	const { data: rocket, isLoading } = useGetRocket(id);
+	const { data: rocket, isLoading, isError } = useGetRocket(id);
 
 	const {
 		name: rocketName,
@@ -73,6 +73,14 @@ function Rocket() {
 				</svg>
 				<span className='sr-only'>Loading...</span>
 			</div>
+		);
+	}
+
+	if (isError) {
+		return (
+			<h3 className='text-center mt-10 text-xl text-red-500'>
+				Something went wrong. Please try again later.
+			</h3>
 		);
 	}
 
