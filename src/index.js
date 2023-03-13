@@ -6,6 +6,7 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './components/App';
 import { CapsuleFilterProvider } from './contexts/capsule-filter';
 import { ThemeProvider } from './contexts/theme';
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import './index.css';
 
 const queryClient = new QueryClient();
@@ -24,3 +25,5 @@ root.render(
 		</BrowserRouter>
 	</React.StrictMode>,
 );
+
+serviceWorkerRegistration.register();

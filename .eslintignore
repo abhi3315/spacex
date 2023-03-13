@@ -5,3 +5,5 @@ package-lock.json
 README.md
 tailwind.config.js
 .husky
+**/*/service-worker.js
+**/*/serviceWorkerRegistration.js
