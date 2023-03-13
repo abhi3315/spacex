@@ -3,6 +3,7 @@ on: [push, pull_request]
 
 jobs:
   lint:
+    name: Lint
     runs-on: ubuntu-latest
 
     steps:
@@ -20,6 +21,8 @@ jobs:
         run: npm run lint && npm run format:check
 
   test:
+    name: Test
+    needs: lint
     runs-on: ubuntu-latest
 
     steps:
