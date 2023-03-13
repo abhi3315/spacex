@@ -91,10 +91,10 @@ function Rocket() {
 	return (
 		<div className='p-10'>
 			<div className='grid grid-cols-1 gap-10 md:grid-cols-12'>
-				<div className='col-span-7 rounded-lg overflow-hidden'>
+				<div className='col-span-1 md:col-span-7 rounded-lg overflow-hidden'>
 					<Carousel interval={8000} images={rocket?.flickr_images} pause={false} />
 				</div>
-				<div className='col-span-5'>
+				<div className='col-span-1 md:col-span-5'>
 					<h1 className='max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white'>
 						{rocketName}
 					</h1>
