@@ -2,6 +2,7 @@
 	"name": "spacex-rockets",
 	"version": "0.1.0",
 	"private": true,
+	"homepage": "https://spacex.theabhishek.tech",
 	"dependencies": {
 		"@tailwindcss/line-clamp": "^0.4.2",
 		"@testing-library/jest-dom": "^5.16.5",
@@ -28,7 +29,9 @@
 		"lint:fix": "eslint --fix './src/**/*.{js,jsx,ts,tsx,json}'",
 		"format": "prettier --write './src/**/*.{js,jsx,ts,tsx,css,md,json,scss}' --config ./.prettierrc",
 		"format:check": "prettier --check './src/**/*.{js,jsx,ts,tsx,css,md,json,scss}' --config ./.prettierrc",
-		"prepare": "husky install"
+		"prepare": "husky install",
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d build"
 	},
 	"eslintConfig": {
 		"extends": [
@@ -58,6 +61,7 @@
 		"eslint-plugin-jsx-a11y": "^6.7.1",
 		"eslint-plugin-react": "^7.32.2",
 		"eslint-plugin-react-hooks": "^4.6.0",
+		"gh-pages": "^5.0.0",
 		"husky": "^8.0.0",
 		"prettier": "2.8.4",
 		"sass": "^1.58.3",
