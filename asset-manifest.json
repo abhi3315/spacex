@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/abhishek-sharma-frontend-developer/static/css/main.0a990758.css",
-    "main.js": "/abhishek-sharma-frontend-developer/static/js/main.40460586.js",
-    "static/media/rocket.webp": "/abhishek-sharma-frontend-developer/static/media/rocket.05bdad6b70f42ba414ae.webp",
-    "service-worker.js": "/abhishek-sharma-frontend-developer/service-worker.js",
-    "index.html": "/abhishek-sharma-frontend-developer/index.html",
-    "main.0a990758.css.map": "/abhishek-sharma-frontend-developer/static/css/main.0a990758.css.map",
-    "main.40460586.js.map": "/abhishek-sharma-frontend-developer/static/js/main.40460586.js.map"
+    "main.css": "/static/css/main.0a990758.css",
+    "main.js": "/static/js/main.993a1f49.js",
+    "static/media/rocket.webp": "/static/media/rocket.05bdad6b70f42ba414ae.webp",
+    "service-worker.js": "/service-worker.js",
+    "index.html": "/index.html",
+    "main.0a990758.css.map": "/static/css/main.0a990758.css.map",
+    "main.993a1f49.js.map": "/static/js/main.993a1f49.js.map"
   },
   "entrypoints": [
     "static/css/main.0a990758.css",
-    "static/js/main.40460586.js"
+    "static/js/main.993a1f49.js"
   ]
 }
