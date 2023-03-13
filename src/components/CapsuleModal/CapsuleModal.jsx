@@ -3,9 +3,10 @@ import propTypes from 'prop-types';
 import { useGetCapsule } from '../../hooks/capsule';
 import capsuleUtil from '../../utils/capsules';
 import NA from '../NA';
+import Spinner from '../Spinner';
 
 function Capsule({ id, isOpen, onClose }) {
-	const { data: capsule, isLoading } = useGetCapsule(id);
+	const { data: capsule, isLoading, isError } = useGetCapsule(id);
 
 	const {
 		serial,
@@ -26,10 +27,6 @@ function Capsule({ id, isOpen, onClose }) {
 		return null;
 	}
 
-	if (isLoading) {
-		return null;
-	}
-
 	return (
 		<>
 			<div
@@ -45,15 +42,17 @@ function Capsule({ id, isOpen, onClose }) {
 				>
 					<div className='relative bg-white rounded-lg shadow dark:bg-zinc-700'>
 						<div className='flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600'>
-							<h3 className='text-2xl font-semibold text-gray-900 dark:text-white'>
-								{serial}
-								<span className='bg-blue-100 ml-5 capitalize text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300'>
-									{type}
-								</span>
-								<span className={`text-sm font-medium mr-2 px-2.5 py-0.5 rounded ${colorClass}`}>
-									{statusLabels[status]}
-								</span>
-							</h3>
+							{!isError && !isLoading && (
+								<h3 className='text-2xl font-semibold text-gray-900 dark:text-white'>
+									{serial}
+									<span className='bg-blue-100 ml-5 capitalize text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300'>
+										{type}
+									</span>
+									<span className={`text-sm font-medium mr-2 px-2.5 py-0.5 rounded ${colorClass}`}>
+										{statusLabels[status]}
+									</span>
+								</h3>
+							)}
 							<button
 								type='button'
 								aria-label='Close modal'
@@ -77,28 +76,38 @@ function Capsule({ id, isOpen, onClose }) {
 							</button>
 						</div>
 						<div className='p-6 space-y-6 text-neutral-600 dark:text-neutral-200'>
-							<p className='text-base'>
-								<span className='font-bold'>Last Update: </span>
-								{lastUpdate}
-							</p>
-							<div className='grid grid-cols-1 gap-2 sm:grid-cols-2'>
-								<div className='grid grid-cols-2'>
-									<div className='line-clamp-1 font-bold'>Reuse Count:</div>
-									<div>{reuseCount ?? <NA />}</div>
-								</div>
-								<div className='grid grid-cols-2'>
-									<div className='line-clamp-1 font-bold'>Launches:</div>
-									<div>{launches?.length ?? <NA />}</div>
-								</div>
-								<div className='grid grid-cols-2'>
-									<div className='line-clamp-1 font-bold'>Water Landings:</div>
-									<div>{waterLandings ?? <NA />}</div>
-								</div>
-								<div className='grid grid-cols-2'>
-									<div className='line-clamp-1 font-bold'>Land Landings:</div>
-									<div>{landLandings ?? <NA />}</div>
-								</div>
-							</div>
+							{isError && (
+								<h3 className='text-center mt-10 text-xl text-red-500'>
+									Something went wrong. Please try again later.
+								</h3>
+							)}
+							{isLoading && <Spinner />}
+							{!isLoading && !isError && (
+								<>
+									<p className='text-base'>
+										<span className='font-bold'>Last Update: </span>
+										{lastUpdate}
+									</p>
+									<div className='grid grid-cols-1 gap-2 sm:grid-cols-2'>
+										<div className='grid grid-cols-2'>
+											<div className='line-clamp-1 font-bold'>Reuse Count:</div>
+											<div>{reuseCount ?? <NA />}</div>
+										</div>
+										<div className='grid grid-cols-2'>
+											<div className='line-clamp-1 font-bold'>Launches:</div>
+											<div>{launches?.length ?? <NA />}</div>
+										</div>
+										<div className='grid grid-cols-2'>
+											<div className='line-clamp-1 font-bold'>Water Landings:</div>
+											<div>{waterLandings ?? <NA />}</div>
+										</div>
+										<div className='grid grid-cols-2'>
+											<div className='line-clamp-1 font-bold'>Land Landings:</div>
+											<div>{landLandings ?? <NA />}</div>
+										</div>
+									</div>
+								</>
+							)}
 						</div>
 					</div>
 				</div>
