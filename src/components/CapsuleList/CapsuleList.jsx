@@ -9,12 +9,19 @@ function CapsuleList() {
 
 	const { data: capsules, isLoading, isError } = useGetCapsules(filter, page);
 
-	const capsuleList = capsules?.docs?.map((capsuleData) => (
-		<CapsuleCard key={capsuleData.id} capsule={capsuleData} />
-	));
+	const capsuleList = (
+		<div className='grid grid-cols-1 gap-10 px-10 pb-20 xl:px-32 lg:grid-cols-3 md:grid-cols-2'>
+			{capsules?.docs?.map((capsuleData) => (
+				<CapsuleCard key={capsuleData.id} capsule={capsuleData} />
+			))}
+		</div>
+	);
 
 	const capsuleListLoading = (
-		<div data-testid='loading-indicator'>
+		<div
+			data-testid='loading-indicator'
+			className='grid grid-cols-1 gap-10 px-10 pb-20 xl:px-32 lg:grid-cols-3 md:grid-cols-2'
+		>
 			{new Array(3).fill(0).map(() => (
 				<LoadingCard key={Math.random()} />
 			))}
@@ -33,9 +40,7 @@ function CapsuleList() {
 
 	return (
 		<div className='mb-32'>
-			<div className='grid grid-cols-1 gap-10 px-10 pb-20 xl:px-32 lg:grid-cols-3 md:grid-cols-2'>
-				{isLoading ? capsuleListLoading : capsuleList}
-			</div>
+			{isLoading ? capsuleListLoading : capsuleList}
 			{isLoading || !capsules?.docs?.length ? null : (
 				<Pagination hasNextPage={hasNextPage} hasPrevPage={hasPrevPage} totalCapsules={totalDocs} />
 			)}
