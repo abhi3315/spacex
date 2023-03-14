@@ -40,6 +40,9 @@ function CapsuleList() {
 
 	return (
 		<div className='mb-32'>
+			{capsules?.docs?.length === 0 && !isError && !isLoading && (
+				<h3 className='text-center mb-20 text-xl text-red-500'>No Capsules Found.</h3>
+			)}
 			{isLoading ? capsuleListLoading : capsuleList}
 			{isLoading || !capsules?.docs?.length ? null : (
 				<Pagination hasNextPage={hasNextPage} hasPrevPage={hasPrevPage} totalCapsules={totalDocs} />

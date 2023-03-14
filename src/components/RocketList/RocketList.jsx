@@ -24,6 +24,9 @@ export default function RocketList() {
 					Unable to load Rocket lists. Please try again later.
 				</h3>
 			)}
+			{rockets?.length === 0 && !isError && !isLoading && (
+				<h3 className='text-center mb-20 text-xl text-red-500'>No Rockets Found.</h3>
+			)}
 			<div className='grid grid-cols-1 gap-10 px-10 pb-20 xl:px-32 lg:grid-cols-3 md:grid-cols-2'>
 				{isLoading ? rocketListLoading : rocketList}
 			</div>
